@@ -74,13 +74,16 @@ public class MummyAgent : Agent
         var action = actions.ContinuousActions;
         Debug.Log($"[0]={action[0]}, [1]={action[1]}");
 
-
-
+        // 에이전트 이동로직
     }
 
     // 개발자 테스트용 입력
     public override void Heuristic(in ActionBuffers actionsOut)
     {
-
+        var action = actionsOut.ContinuousActions;
+        //전진/후진
+        action[0] = Input.GetAxis("Vertical"); //Up/Down, W/S
+        //좌/우
+        action[1] = Input.GetAxis("Horizontal"); //Left/Right, A,D
     }
 }
