@@ -34,7 +34,9 @@ public class MummyAgent : Agent
     // 학습(Episode)이 시작될때 마다 호출
     public override void OnEpisodeBegin()
     {
-
+        // 물리엔진의 초기화
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
     }
 
     // 주변환경을 관측 데이터를 브레인에게 전송
