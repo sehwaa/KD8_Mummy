@@ -27,7 +27,8 @@ public class MummyAgent : Agent
     // 초기화 작업시 호출되는 메소드
     public override void Initialize()
     {
-
+        tr = GetComponent<Transform>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // 학습(Episode)이 시작될때 마다 호출
