@@ -65,6 +65,16 @@ public class MummyAgent : Agent
     // 브레인으로 부터 명령을 전달 받을때 마다 호출
     public override void OnActionReceived(ActionBuffers actions)
     {
+        /*
+            연속(Continues)  -1.0f ~ 0.0f ~ +1.0f
+            이산(Discrete)   -1, 0, +1
+        */
+
+
+        var action = actions.ContinuousActions;
+        Debug.Log($"[0]={action[0]}, [1]={action[1]}");
+
+
 
     }
 
