@@ -70,11 +70,16 @@ public class MummyAgent : Agent
             이산(Discrete)   -1, 0, +1
         */
 
-
         var action = actions.ContinuousActions;
         Debug.Log($"[0]={action[0]}, [1]={action[1]}");
 
         // 에이전트 이동로직
+        Vector3 dir = (Vector3.forward * action[0]) + (Vector3.right * action[1]);
+        rb.AddForce(dir.normalized * 30.0f);
+
+        //미세한 Minus Reward -1 ~ +1
+        //지속적인 움직임을 유도하기 위한 마이너스 페널티
+        SetReward(-0.001f);
     }
 
     // 개발자 테스트용 입력
