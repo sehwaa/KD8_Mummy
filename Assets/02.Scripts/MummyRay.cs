@@ -7,12 +7,18 @@ using Unity.MLAgents.Actuators;
 
 public class MummyRay : Agent
 {
+    private StageManager stageManager;
+
     public override void Initialize()
     {
+        MaxStep = 100;
+        stageManager = transform.root.GetComponent<StageManager>();
     }
 
     public override void OnEpisodeBegin()
     {
+        // 스테이지 초기화 메소드 호출
+        stageManager.InitStage();
     }
 
     public override void CollectObservations(VectorSensor sensor)
