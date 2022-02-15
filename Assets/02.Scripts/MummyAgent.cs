@@ -91,4 +91,19 @@ public class MummyAgent : Agent
         //좌/우
         action[1] = Input.GetAxis("Horizontal"); //Left/Right, A,D
     }
+
+    void OnCollisionEnter(Collision coll)
+    {
+        if (coll.collider.CompareTag("DEADZONE"))
+        {
+            SetReward(-1.0f);
+            EndEpisode(); // 학습 종료
+        }
+
+        if (coll.collider.CompareTag("TARGET"))
+        {
+            SetReward(+1.0f);
+            EndEpisode();
+        }
+    }
 }
