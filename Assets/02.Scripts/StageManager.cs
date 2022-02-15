@@ -13,6 +13,9 @@ public class StageManager : MonoBehaviour
     [Range(10, 50)]
     public float badItemCount = 20;
 
+    public List<GameObject> goodList = new List<GameObject>();
+    public List<GameObject> badList = new List<GameObject>();
+
     public void InitStage()
     {
         // 기존에 생성됐던 아이템 삭제
