@@ -82,7 +82,7 @@ public class MummyAgent : Agent
         */
 
         var action = actions.ContinuousActions;
-        Debug.Log($"[0]={action[0]}, [1]={action[1]}");
+        //Debug.Log($"[0]={action[0]}, [1]={action[1]}");
 
         // 에이전트 이동로직
         Vector3 dir = (Vector3.forward * action[0]) + (Vector3.right * action[1]);
