@@ -53,7 +53,13 @@ public class MummyAgent : Agent
     // 주변환경을 관측 데이터를 브레인에게 전송
     public override void CollectObservations(VectorSensor sensor)
     {
-
+        // 타겟의 위치를 관측
+        sensor.AddObservation(targetTr.position); //x,y,z --> 3개
+        // 자신의 위치를 관측
+        sensor.AddObservation(tr.localPosition);  //x,y, z --> 3개
+        // 속도 관측
+        sensor.AddObservation(rb.velocity.x);     // 1개
+        sensor.AddObservation(rb.velocity.z);     // 1개
     }
 
     // 브레인으로 부터 명령을 전달 받을때 마다 호출
