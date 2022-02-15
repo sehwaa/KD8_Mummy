@@ -13,6 +13,17 @@ using Unity.MLAgents.Actuators;
 
 public class MummyAgent : Agent
 {
+    // 관측 종류
+    /*
+        - Rigidbody Velocity
+        - 타겟과의 거리
+        - 자신의 위치
+    */
+
+    private Transform tr;
+    private Rigidbody rb;
+    public Transform targetTr;
+
     // 초기화 작업시 호출되는 메소드
     public override void Initialize()
     {
