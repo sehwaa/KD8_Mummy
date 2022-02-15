@@ -541,25 +541,6 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!114 &3039905106231930075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3039905106231831099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a6b83e262f084ec5b7b8be2d696e72d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agentParameters:
-    maxStep: 0
-  hasUpgradedFromAgentParameters: 1
-  MaxStep: 1000
-  targetTr: {fileID: 3039905106287160582}
-  goodMt: {fileID: 2100000, guid: e5b10cbd0d21e476b9a6b371c2c206d0, type: 2}
-  badMt: {fileID: 2100000, guid: 7b924c3c48d3b4183b3948c77806f9fe, type: 2}
 --- !u!114 &3039905106231930074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,7 +563,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 2a9f95b76425c41e09ab8b4b6514a996, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: Mummy
@@ -590,6 +571,25 @@ MonoBehaviour:
   m_UseChildSensors: 1
   m_UseChildActuators: 1
   m_ObservableAttributeHandling: 0
+--- !u!114 &3039905106231930075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3039905106231831099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6b83e262f084ec5b7b8be2d696e72d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 1000
+  targetTr: {fileID: 3039905106287160582}
+  goodMt: {fileID: 2100000, guid: e5b10cbd0d21e476b9a6b371c2c206d0, type: 2}
+  badMt: {fileID: 2100000, guid: 7b924c3c48d3b4183b3948c77806f9fe, type: 2}
 --- !u!114 &3039905106231930085
 MonoBehaviour:
   m_ObjectHideFlags: 0
