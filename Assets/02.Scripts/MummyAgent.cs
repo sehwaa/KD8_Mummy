@@ -37,6 +37,17 @@ public class MummyAgent : Agent
         // 물리엔진의 초기화
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
+
+        // 에이전트의 위치를 불규칙하게 변경
+        tr.localPosition = new Vector3(Random.Range(-4.0f, +4.0f)
+                                        , 0.0f
+                                        , Random.Range(-4.0f, +4.0f));
+
+        // 타겟의 위치를 불규칙하게 변경
+        targetTr.localPosition = new Vector3(Random.Range(-4.0f, +4.0f)
+                                        , 0.5f
+                                        , Random.Range(-4.0f, +4.0f));
+
     }
 
     // 주변환경을 관측 데이터를 브레인에게 전송
