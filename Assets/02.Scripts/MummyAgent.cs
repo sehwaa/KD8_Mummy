@@ -24,11 +24,22 @@ public class MummyAgent : Agent
     private Rigidbody rb;
     public Transform targetTr;
 
+    public Material goodMt, badMt;
+    private Material originalMt;
+    private new Renderer renderer;
+
     // 초기화 작업시 호출되는 메소드
     public override void Initialize()
     {
         tr = GetComponent<Transform>();
         rb = GetComponent<Rigidbody>();
+
+        /*
+            GameObject.Find("")
+            Transform.Find("")
+        */
+        renderer = tr.root.Find("Floor").GetComponent<MeshRenderer>();
+        originalMt = renderer.material;
     }
 
     // 학습(Episode)이 시작될때 마다 호출
