@@ -65,7 +65,7 @@ public class MummyAgent : Agent
     public override void CollectObservations(VectorSensor sensor)
     {
         // 타겟의 위치를 관측
-        sensor.AddObservation(targetTr.position); //x,y,z --> 3개
+        sensor.AddObservation(targetTr.localPosition); //x,y,z --> 3개
         // 자신의 위치를 관측
         sensor.AddObservation(tr.localPosition);  //x,y, z --> 3개
         // 속도 관측
