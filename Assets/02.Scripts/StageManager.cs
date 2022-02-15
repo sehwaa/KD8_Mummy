@@ -19,6 +19,17 @@ public class StageManager : MonoBehaviour
     public void InitStage()
     {
         // 기존에 생성됐던 아이템 삭제
+        foreach (var obj in goodList)
+        {
+            Destroy(obj);
+        }
+        goodList.Clear();
+
+        foreach (var obj in badList)
+        {
+            Destroy(obj);
+        }
+        badList.Clear();
 
         // GoodItem 생성
         for (int i = 0; i < goodItemCount; i++)
