@@ -107,14 +107,24 @@ public class MummyAgent : Agent
     {
         if (coll.collider.CompareTag("DEADZONE"))
         {
+            StartCoroutine(ChangeColor(badMt));
             SetReward(-1.0f);
             EndEpisode(); // 학습 종료
         }
 
         if (coll.collider.CompareTag("TARGET"))
         {
+            StartCoroutine(ChangeColor(goodMt));
             SetReward(+1.0f);
             EndEpisode();
         }
+    }
+
+    IEnumerator ChangeColor(Material changeMt)
+    {
+        renderer.material = changeMt;
+
+        yield return new WaitForSeconds(0.2f);
+        renderer.material = originalMt;
     }
 }
