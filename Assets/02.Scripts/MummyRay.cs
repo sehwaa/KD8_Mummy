@@ -7,12 +7,17 @@ using Unity.MLAgents.Actuators;
 
 public class MummyRay : Agent
 {
+    private Transform tr;
+    private Rigidbody rb;
     private StageManager stageManager;
 
     public override void Initialize()
     {
         MaxStep = 100;
         stageManager = transform.root.GetComponent<StageManager>();
+
+        tr = GetComponent<Transform>();
+        rb = GetComponent<Rigidbody>();
     }
 
     public override void OnEpisodeBegin()
