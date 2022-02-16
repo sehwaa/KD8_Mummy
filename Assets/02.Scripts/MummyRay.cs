@@ -61,6 +61,12 @@ public class MummyRay : Agent
             case 1: rot = -tr.up; break;
             case 2: rot = tr.up; break;
         }
+
+        tr.Rotate(rot, Time.fixedDeltaTime * turnSpeed);
+        rb.AddForce(dir * moveSpeed, ForceMode.VelocityChange);
+
+        // 움직임 유도를 위한 마이너스 페널티
+        AddReward(-1 / (float)MaxStep); // -1/5000 = -0.005f
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
