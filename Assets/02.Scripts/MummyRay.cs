@@ -10,6 +10,8 @@ public class MummyRay : Agent
     private Transform tr;
     private Rigidbody rb;
     private StageManager stageManager;
+    public float moveSpeed = 1.5f;      // 이동 속도
+    public float turnSpeed = 200.0f;    // 회전 속도
 
     public override void Initialize()
     {
