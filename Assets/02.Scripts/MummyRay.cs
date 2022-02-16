@@ -61,5 +61,13 @@ public class MummyRay : Agent
         }
 
         // 좌/우 회전 - Branch 1 = (0:무회전, 1:왼쪽회전, 2:오른쪽회전) size = 3
+        if (Input.GetKey(KeyCode.A))
+        {
+            actions[1] = 1; // 왼쪽으로 회전
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            actions[1] = 2; // 오른쪽 회전
+        }
     }
 }
