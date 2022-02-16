@@ -41,7 +41,7 @@ public class StageManager : MonoBehaviour
             // 불규칙한 회전
             Quaternion rot = Quaternion.Euler(Vector3.up * Random.Range(0, 360));
 
-            goodList.Add(Instantiate(goodItem, pos, rot, transform));
+            goodList.Add(Instantiate(goodItem, transform.position + pos, rot, transform));
         }
 
         // BadItem 생성
@@ -54,7 +54,7 @@ public class StageManager : MonoBehaviour
             // 불규칙한 회전
             Quaternion rot = Quaternion.Euler(Vector3.up * Random.Range(0, 360));
 
-            badList.Add(Instantiate(badItem, pos, rot, transform));
+            badList.Add(Instantiate(badItem, transform.position + pos, rot, transform));
         }
     }
 
